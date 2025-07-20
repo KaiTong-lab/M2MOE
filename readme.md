@@ -6,7 +6,7 @@
 Time series often exhibit multi-scale dynamic patterns and structural variations, which impose higher demands on the representation and adaptability of forecasting models. To address this challenge, we propose a Multi-view Multi-scale Mixture-of-Experts model (M2MoE) designed for fine-grained modeling and accurate prediction of complex temporal structures. Specifically, M2MoE partitions the input sequence into multiple views using various combinations of patch lengths and strides, with each view corresponding to a dedicated sub-model for extracting dynamic features at different granularities. Each sub-model is equipped with a multi-layer convolutional architecture and a dual attention mechanism to capture both local and global dependencies within and across temporal patches. Finally, a sparse gating mechanism is employed to adaptively select the most relevant experts for prediction based on the input characteristics. The experimental results demonstrate that M2MoE significantly outperforms existing methods on multiple public time series datasets, exhibiting superior accuracy and robustness.
 
 <p align="center">
-    <img src=assest/model.png" width="800">
+    <img src="assest/model.png" width="800">
 </p>
 
 ## Prerequisites
