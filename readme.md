@@ -1,17 +1,12 @@
-<p align="center">
-    <img src="assets/logo.png" width="150">
-</p>
+# M2MoE: A Multi-view Multi-scale Mixture-of-Experts Model for Time Series Forecasting
 
 
-# Adaptive Multi-Scale Decomposition Framework for Time Series Forecasting
-
-[![arXiv](http://img.shields.io/badge/cs.LG-arXiv%3A2406.03751-B31B1B.svg)](https://arxiv.org/abs/2406.03751)
 
 ## Overview
-The Adaptive Multi-Scale Decomposition Framework (AMD) is a cutting-edge solution for time series forecasting, incorporating three main components: the Multi-Scale Decomposable Mixing (MDM) Block, the Dual Dependency Interaction (DDI) Block, and the Adaptive Multi-predictor Synthesis (AMS) Block.
+Time series often exhibit multi-scale dynamic patterns and structural variations, which impose higher demands on the representation and adaptability of forecasting models. To address this challenge, we propose a Multi-view Multi-scale Mixture-of-Experts model (M2MoE) designed for fine-grained modeling and accurate prediction of complex temporal structures. Specifically, M2MoE partitions the input sequence into multiple views using various combinations of patch lengths and strides, with each view corresponding to a dedicated sub-model for extracting dynamic features at different granularities. Each sub-model is equipped with a multi-layer convolutional architecture and a dual attention mechanism to capture both local and global dependencies within and across temporal patches. Finally, a sparse gating mechanism is employed to adaptively select the most relevant experts for prediction based on the input characteristics. The experimental results demonstrate that M2MoE significantly outperforms existing methods on multiple public time series datasets, exhibiting superior accuracy and robustness.
 
 <p align="center">
-    <img src="assets/pipeline.png" width="800">
+    <img src=assest/model.png" width="800">
 </p>
 
 ## Prerequisites
@@ -27,12 +22,10 @@ Download the required datasets from [Autoformer](https://github.com/thuml/Autofo
 ```
 data
 ├── electricity.csv
-├── exchange_rate
 ├── ETTh1.csv
 ├── ETTh2.csv
 ├── ETTm1.csv
 ├── ETTm2.csv
-├── solar_AL.txt
 ├── traffic.csv
 └── weather.csv
 ```
@@ -44,17 +37,6 @@ All training scripts are located in the `./scripts` directory. The details of th
 ./scripts/Weather.sh
 ```
 
-## Citation
-If you find this repository helpful, please cite our paper:
-
-```bibtex
-@inproceedings{hu2025adaptive,
-  title={Adaptive Multi-Scale Decomposition Framework for Time Series Forecasting},
-  author={Hu, Yifan and Liu, Peiyuan and Zhu, Peng and Cheng, Dawei and Dai, Tao},
-  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  year={2025}
-}
-```
 
 ## Acknowledgements
 We gratefully acknowledge the following GitHub repositories for their valuable contributions:
@@ -65,8 +47,4 @@ We gratefully acknowledge the following GitHub repositories for their valuable c
 - [PatchTST](https://github.com/yuqinie98/PatchTST)
 - [iTransformer](https://github.com/thuml/iTransformer)
 
-## Contact
-For any questions or inquiries, please submit an issue or contact us via email:
 
-- Yifan Hu ([huyf0122@gmail.com](mailto:huyf0122@gmail.com))
-- Peiyuan Liu ([lpy23@mails.tsinghua.edu.cn](mailto:lpy23@mails.tsinghua.edu.cn))
